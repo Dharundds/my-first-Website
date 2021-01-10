@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>PyInstaller</title>
+</head>
+<style>
+    *{
+        font-family: 'Poppins', sans-serif;
+    }
+    body{
+        background: url("../images/background.png");
+        background-size: cover;
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .content{
+        width: 90%;
+        padding: 20px;
+        margin: auto;
+        margin-top: 100px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+    }
+    .heading{
+        color: darkslateblue;
+        text-align: center;
+    }
+    .mini-heading{
+        font-size: 1rem;
+        font-weight: 100;
+        color: darkslateblue;
+        text-align: center;
+    }
+    .question{
+        font-size: 1.3rem;
+        color: rgb(0, 145, 24);
+        
+    }
+    .pair{
+        margin: 40px 0px;
+    }
+    .special{
+        color: darkslateblue;
+        text-align: center;
+        font-weight: 100;
+        border: 1px solid darkslateblue;
+        width: 200px;
+        margin: auto;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    .special2{
+        padding: 3px;
+        background-color: rgb(4, 126, 156);
+        color: aliceblue;
+        text-align: center;
+    }
+    .special3{
+        color: darkslateblue;
+        font-weight: 500;
+    }
+    footer{
+        height: 10vh;
+    }
+</style>
+<body>
+    <div class="content">
+        <h1 class="heading">PyInstaller</h1>
+        <h2 class="mini-heading">This document is a beginner guide about PyInstaller</h2>
+
+        <div class="pair">
+            <h2 class="question">What is Pyinstaller?</h2>
+            <p>To put it in simple terms, Pyinstaller is a module in Python
+            which bundles a Python application or script which you have
+            wrote and all its dependencies into single package.</p>
+            <p class="special">Converts .py to .exe</p>
+        </div>
+        <div class="pair">
+            <h2 class="question">Why PyInstaller? What does this module do?</h2>
+            <p>This module makes the user to run their packaged app
+            without installing any of such Python interpreter or any modules.
+            It correctly bundles the major Python packages such as Django,
+            wxPython, numpy and so on.</p>
+        </div>
+        <div class="pair">
+            <h2 class="question">Compatible python versions</h2>
+            <p>Versions supported for Pyinstaller is Python 3.5 or above.</p>
+        </div>
+        <div class="pair">
+            <h2 class="question">How to Install Pyinstaller using pip</h2>
+            <p>Within your command prompt or within your
+            environment terminal type the command.</p>
+            <p class="special2">>>>pip/pip3 install pyinstaller</p>
+            <p>To check if pyinstaller is installed properly</p>
+            <p class="special2">>>> pyinstaller –v</p>
+            <p>If installed properly it will give the version of pyinstaller. If not
+            make sure that execution path includes the proper directory:</p>
+            <p class="special3">Window: C:\PythonXY\script_name <br>
+            XY stands for versions (EX: Python34 for Python 3.4) <br>
+            Linux: /usr/bin <br>
+            OS X: /usr/bin OR /usr/local/bin</p>
+        </div>
+        <div class="pair">
+            <h2 class="question">How to use pyinstaller using command prompt</h2>
+            <p class="special2">>>>pyinstaller script_name.py</p>
+        </div>
+        <div class="pair">
+            <h2 class="question">We can add additional parameters</h2>
+        <p>-w</p>
+        <p class="special3">The python console window does not appear</p>
+        <p class="special2">>>>pyinstaller –w script_name.py</p>
+        
+        <p>--onefile</p>
+        <p class="special3">Makes sure that all the modules in our python program are
+            included in one executable file than multiple files.
+            </p>
+        <p class="special2">>>>pyinstaller --onefile script_name.py</p>
+        <p>--add-data</p>
+        <p class="special3">It includes all the dependencies like databases, images, other
+            python files etc.</p>
+        <p class="special2">>>>pyinstaller --add-data “database.db” script_name.py</p>
+        <p>--icon</p>
+        <p class="special3">It will add icon to the executable</p>
+        <p class="special2">>>>pyinstaller --icon=name.ico script_name.py</p>
+        </div>
+        <div class="pair">
+            <h2 class="question">We can include the above parameters in one single line</h2>
+        <p class="special2">>>>pyinstaller –w --add-data --onefile script_name.py</p>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>
