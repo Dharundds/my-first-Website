@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="signup/signup.css">
+	<title>Signup</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/5859/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					let now = new Date();
+			
+					alert("Form Data Submitted :) on "+now.getUTCDay()+" at "+now.getHours()+":"+now.getMinutes());
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+			
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form id="myForm">
+			<label for="Email_address">Email_Address</label><br>
+			<input type="email" name="Email_address" id="Email_address" placeholder="Enter your valid Email Email_Address" required />
+			<i class="far fa-envelope"></i>
+			<br>
+			<br>
+			<label for="psw">Create_Password</label><br>
+			<input type="password" name="Create_Password" id="pswrd" placeholder="Create new password" required />
+			<i class="fas fa-eye" onclick = 'show()'></i>
+			<br>
+			<br>
+			<label for="psw-repeat">Confirm_Password</label><br>
+			<input type="password" name="Confirm_Password" id="pswrd-repeat" placeholder="Confirm Password" required/>
+			
+			<br>
+			
+		</form>
+		<button type="submit" onclick='SubForm()'>Submit</button>
+	</div>
+	<script src="signup/signup.js"></script>
+	<button id="button1"><a href="index.html"> Go back to Home</a></button>
+</body>
+</html>

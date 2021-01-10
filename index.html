@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type = "text/css" href = "style.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class = "BK">
+        <div class = "navbar">
+            
+            <button type="button"><a href="signup.html">Sign up</a></button>
+           
+        </div>
+         <div class="content">
+                <small>Welcome to My</small>
+                <h1>First <br>webpage using js</h1>
+                <button type="button"><a href="planets/Planets.html">Click Here see our first js project </a> </button>
+        </div>
+        <input type="checkbox" id="check" >
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+
+        <nav class="side-bar"> 
+           <!-- <img src="images/menu.png" class= "menu" >-->
+                <ul>
+                    <li><a href="#" class="pro-btn"><i class="fas fa-link"></i>Our Projects <span class="fas fa-caret-down first"></span></a></li>
+                    <ul class="pro-show">
+                        <li><a href="static/pyinstaller.html">About pyinstaller</a></li>
+                        <li><a href="speech to text/vc.html">speech to text</a></li>
+                    </ul>
+                    <li><a href="contactus/contactus.html"><i class="far fa-envelope"></i>Contact us</a></li>
+                    
+                </ul>
+            
+            <div class="useful-link">
+            <img src="images/share.png" >
+            <img src="images/info.png" >
+            </div>
+        </nav>
+        <div class="bubbles">
+            <img src="images/bubble.png" >
+            <img src="images/bubble.png" >
+            <img src="images/bubble.png" >
+            <img src="images/bubble.png" >
+            <img src="images/bubble.png" >
+            <img src="images/bubble.png" >
+            <img src="images/bubble.png" >
+        </div>
+        
+
+    </div>
+<!--<div class="soical-link">
+                <img src="images/fb.png" >
+                <img src="images/ig.png" >
+                <img src="images/tw.png" >
+            </div>-->
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('.pro-btn').click(function (){
+            $('nav ul .pro-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+    </script>
+</body>
+</html>
